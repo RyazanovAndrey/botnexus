@@ -1,0 +1,130 @@
+@use "../base/vars" as *;
+
+.home {
+
+  padding-block: 70px;
+
+  .home-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    justify-content: space-between;
+  }
+
+  .home-content * {
+    margin-bottom: 50px;
+  }
+
+  .home-img-box {
+    position: relative;
+  }
+
+  .home-img-box:before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: white;
+    z-index: -1;
+    border-radius: 50px;
+    rotate: -10deg;
+    opacity: 0.2;
+  }
+
+  .home-img-box:after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: white;
+    z-index: -1;
+    border-radius: 50px;
+    rotate: -20deg;
+    opacity: 0.2;
+  }
+
+  .home-text {
+    background-image: $color-gradient; /* Or any other gradient type/colors */
+    -webkit-background-clip: text; /* Clip the background to the shape of the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to reveal the background */
+    color: white; /* Fallback color for browsers that don't support the above properties */
+  }
+
+  .home-card {
+    position: absolute;
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+  }
+
+  .card1 {
+    bottom: 20px;
+    left: -100px;
+    animation: animTopBottom 5s infinite;
+  }
+
+  .card2 {
+    right: -100px;
+    top: 20px;
+    animation: animLeftRight 5s infinite;
+  }
+
+  .home-card-title {
+    font-family: $font-title;
+  }
+
+  .home-img {
+    width: 400px;
+    border-radius: 50px;
+  }
+
+  .home-title {
+    font-size: 50px;
+    font-family: $font-title;
+  }
+
+  .swiper.promo {
+    overflow: hidden;
+    width: 600px;
+
+    .swiper-wrapper {
+      display: inline-flex;
+    }
+  }
+
+  .swiper-slide {
+    filter: brightness(30%);
+  }
+}
+
+@keyframes animTopBottom {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes animLeftRight {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

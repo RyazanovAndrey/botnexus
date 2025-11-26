@@ -1,9 +1,27 @@
 @use "../base/vars" as *;
 
 .btn {
+  position: relative;
   background: $color-gradient;
   color: white;
   padding: 15px 40px;
   border-radius: 5px;
   font-family: $font-title;
+  overflow: hidden;
+}
+
+.btn:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  transition: .2s;
+}
+
+.btn:hover:after {
+  width: 100%;
+  left: 100%;
 }

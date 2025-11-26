@@ -1,9 +1,15 @@
+@use "../base/vars" as *;
+
 .header {
 
   padding-block: 15px;
 
   .logo {
-    color: white;
+    background-image: $color-gradient; /* Or any other gradient type/colors */
+    -webkit-background-clip: text; /* Clip the background to the shape of the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to reveal the background */
+    color: white; /* Fallback color for browsers that don't support the above properties */
+    font-size: 30px;
   }
 
   .wrapper {
@@ -16,4 +22,9 @@
     display: flex;
     column-gap: 80px;
   }
+}
+
+.link:hover {
+  color: $color-btn1;
+  transition: .3s;
 }
