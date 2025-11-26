@@ -1,0 +1,9 @@
+@use "../base/vars" as *;
+
+.btn {
+  background: $color-gradient;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 5px;
+  font-family: $font-title;
+}

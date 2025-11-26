@@ -1,0 +1,19 @@
+.header {
+
+  padding-block: 15px;
+
+  .logo {
+    color: white;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: flex;
+    column-gap: 80px;
+  }
+}
