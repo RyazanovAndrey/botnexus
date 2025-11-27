@@ -5,7 +5,7 @@ var typed = new Typed('#element', {
     loop: true
 });
 
-const swiper = new Swiper('.swiper.promo', {
+const swiperPromo = new Swiper('.swiper.promo', {
     loop: true,
     slidesPerView: 4,
     spaceBetween: 20,
@@ -14,3 +14,32 @@ const swiper = new Swiper('.swiper.promo', {
         delay: 2000
     }
 });
+
+const swiperCollection = new Swiper('.swiper.collection-slider', {
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 20,
+    grabCursor: true,
+    autoplay: {
+        delay: 2000
+    }
+});
+
+// Header
+
+const headerLine = document.querySelector('.header')
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY
+    console.log(currentScroll)
+
+    showHeader(currentScroll)
+})
+
+function showHeader(currentScroll) {
+    if(currentScroll >= 400) {
+        headerLine.classList.add('show-header')
+    } else {
+        headerLine.classList.remove('show-header')
+    }
+}

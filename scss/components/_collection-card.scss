@@ -1,0 +1,29 @@
+.collection-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 380px;
+
+  img {
+    transition: .3s;
+  }
+
+  .collection-art {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding-block: 15px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .collection-img {
+    overflow: hidden;
+  }
+
+  &:hover img {
+    scale: 1.1;
+  }
+}

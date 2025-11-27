@@ -1,7 +1,7 @@
 @use "../base/vars" as *;
 
 .header {
-
+  position: relative;
   padding-block: 15px;
 
   .logo {
@@ -27,4 +27,13 @@
 .link:hover {
   color: $color-btn1;
   transition: .3s;
+}
+
+@keyframes showHeader {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

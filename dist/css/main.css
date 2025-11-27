@@ -284,7 +284,34 @@ body {
   color: #774afc;
 }
 
+.collection-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 380px;
+}
+.collection-card img {
+  transition: 0.3s;
+}
+.collection-card .collection-art {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  padding-block: 15px;
+  text-align: center;
+  font-weight: 700;
+}
+.collection-card .collection-img {
+  overflow: hidden;
+}
+.collection-card:hover img {
+  scale: 1.1;
+}
+
 .header {
+  position: relative;
   padding-block: 15px;
 }
 .header .logo {
@@ -309,8 +336,26 @@ body {
   transition: 0.3s;
 }
 
+@keyframes showHeader {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .home {
+  position: relative;
   padding-block: 70px;
+}
+.home .circle {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-color: #774afc;
+  filter: blur(100px);
+  border-radius: 100%;
+  opacity: 0.4;
 }
 .home .home-wrapper {
   display: flex;
@@ -515,7 +560,7 @@ body {
 }
 
 .steps {
-  padding-block: 160px;
+  padding-block: 140px;
 }
 .steps .steps-wrapper {
   display: flex;
@@ -532,6 +577,25 @@ body {
 }
 .steps .steps-text {
   max-width: 600px;
+}
+
+.collection {
+  padding-block: 140px;
+}
+.collection .collection-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.swiper.collection-slider {
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.swiper.collection-slider .swiper-wrapper {
+  display: inline-flex;
 }
 
 /*# sourceMappingURL=main.css.map */

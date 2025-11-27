@@ -1,3 +1,5 @@
+@use "vars" as *;
+
 @mixin flex-line($flex: flex, $jsc, $ai) {
   display: $flex;
   justify-content: $jsc;
@@ -6,4 +8,16 @@
 
 @mixin padding($padding) {
   padding-block: $padding;
+}
+
+@mixin circleRaund($top-bottom, $left-right, $value1, $value2) {
+  position: absolute;
+  $top-bottom: $value1;
+  $left-right: $value2;
+  width: 600px;
+  height: 600px;
+  background-color: $color-btn1;
+  filter: blur(100px);
+  border-radius: 100%;
+  opacity: 0.4;
 }

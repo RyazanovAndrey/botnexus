@@ -2,7 +2,7 @@
 @use "../base/mixins" as *;
 
 .steps {
-  @include padding(160px);
+  @include padding(140px);
 
   .steps-wrapper {
     display: flex;
