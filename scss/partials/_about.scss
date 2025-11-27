@@ -3,7 +3,8 @@
 
 .about {
 
-  @include padding(120px);
+  @include padding(150px);
+  border: 1px solid red;
 
   .about-wrapper {
     display: grid;

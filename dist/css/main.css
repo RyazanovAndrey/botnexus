@@ -323,7 +323,8 @@ body {
   }
 }
 .about {
-  padding-block: 120px;
+  padding-block: 150px;
+  border: 1px solid red;
 }
 .about .about-wrapper {
   display: grid;
@@ -399,6 +400,58 @@ body {
   100% {
     transform: translateX(0px);
   }
+}
+.solutions {
+  padding-block: 150px;
+}
+.solutions .solutions-wrapper {
+  text-align: center;
+}
+.solutions .solutions-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+.solutions .solutions-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.solutions .solutions-card-icon {
+  position: relative;
+  top: 40px;
+  background: linear-gradient(45deg, #774afc, #c3abfd);
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.solutions .solutions-card-icon:hover {
+  transform: rotateY(180deg);
+}
+.solutions .solutions-card-body {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  border-radius: 20px;
+  padding: 50px 20px;
+}
+.solutions .solutions-card-title {
+  text-align: center;
+  font-family: "Science Gothic", sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.solutions .solutions-card-title:hover {
+  color: #774afc;
+}
+.solutions .solutions-text {
+  font-size: 12px;
+  margin-block: 10px;
+}
+.solutions .solutions-count {
+  font-size: 40px;
+  font-family: "Science Gothic", sans-serif;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
