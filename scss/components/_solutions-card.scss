@@ -1,0 +1,57 @@
+@use "../base/vars" as *;
+
+.solutions-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.solutions-card-icon {
+  position: relative;
+  top: 40px;
+  background: $color-gradient;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.solutions-card-body {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  border-radius: 20px;
+  padding: 50px 20px;
+}
+
+.solutions-card-title {
+  text-align: center;
+  font-family: $font-title;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.solutions-text {
+  font-size: 12px;
+  margin-block: 10px;
+}
+
+.solutions-count {
+  font-size: 40px;
+  font-family: $font-title;
+  text-align: center;
+  opacity: 0.3;
+  transition: .3s;
+}
+
+.solutions-card:hover .solutions-card-icon {
+  transform: rotateY(180deg);
+}
+
+.solutions-card:hover .solutions-card-title {
+  color: $color-btn1;
+}
+
+.solutions-card:hover .solutions-count {
+  opacity: 1;
+}

@@ -187,6 +187,103 @@ body {
   font-family: "Science Gothic", sans-serif;
 }
 
+.section-text {
+  text-align: center;
+  max-width: 600px;
+}
+
+.solutions-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.solutions-card-icon {
+  position: relative;
+  top: 40px;
+  background: linear-gradient(45deg, #774afc, #c3abfd);
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.solutions-card-body {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  border-radius: 20px;
+  padding: 50px 20px;
+}
+
+.solutions-card-title {
+  text-align: center;
+  font-family: "Science Gothic", sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.solutions-text {
+  font-size: 12px;
+  margin-block: 10px;
+}
+
+.solutions-count {
+  font-size: 40px;
+  font-family: "Science Gothic", sans-serif;
+  text-align: center;
+  opacity: 0.3;
+  transition: 0.3s;
+}
+
+.solutions-card:hover .solutions-card-icon {
+  transform: rotateY(180deg);
+}
+
+.solutions-card:hover .solutions-card-title {
+  color: #774afc;
+}
+
+.solutions-card:hover .solutions-count {
+  opacity: 1;
+}
+
+.steps-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  display: flex;
+  column-gap: 20px;
+}
+.steps-card:before {
+  content: attr(data-title);
+  position: absolute;
+  top: -30px;
+  left: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Science Gothic", sans-serif;
+  background-image: linear-gradient(45deg, #774afc, #c3abfd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+}
+.steps-card .steps-card-content p {
+  font-size: 14px;
+}
+.steps-card .steps-cards-title {
+  font-family: "Science Gothic", sans-serif;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+.steps-card:hover .steps-cards-title {
+  color: #774afc;
+}
+
 .header {
   padding-block: 15px;
 }
@@ -403,55 +500,38 @@ body {
 }
 .solutions {
   padding-block: 150px;
+  border: 1px solid red;
 }
 .solutions .solutions-wrapper {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
 }
 .solutions .solutions-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
 }
-.solutions .solutions-card {
+
+.steps {
+  padding-block: 160px;
+}
+.steps .steps-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.solutions .solutions-card-icon {
-  position: relative;
-  top: 40px;
-  background: linear-gradient(45deg, #774afc, #c3abfd);
-  display: inline-block;
-  border-radius: 10px;
-  padding: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.solutions .solutions-card-icon:hover {
-  transform: rotateY(180deg);
-}
-.solutions .solutions-card-body {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-  border-radius: 20px;
-  padding: 50px 20px;
-}
-.solutions .solutions-card-title {
   text-align: center;
-  font-family: "Science Gothic", sans-serif;
-  cursor: pointer;
-  transition: 0.3s;
 }
-.solutions .solutions-card-title:hover {
-  color: #774afc;
+.steps .steps-content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 20px;
+  margin-top: 80px;
 }
-.solutions .solutions-text {
-  font-size: 12px;
-  margin-block: 10px;
-}
-.solutions .solutions-count {
-  font-size: 40px;
-  font-family: "Science Gothic", sans-serif;
-  text-align: center;
+.steps .steps-text {
+  max-width: 600px;
 }
 
 /*# sourceMappingURL=main.css.map */
