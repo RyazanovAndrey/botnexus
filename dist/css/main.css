@@ -103,6 +103,10 @@ legend {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter";
   background-color: #0b0f2c;
@@ -163,6 +167,24 @@ body {
 .btn:hover:after {
   width: 100%;
   left: 100%;
+}
+
+.section-desc {
+  padding: 10px 20px;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: "Science Gothic", sans-serif;
+  background-image: linear-gradient(45deg, #774afc, #c3abfd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+}
+
+.section-title {
+  font-size: 60px;
+  font-family: "Science Gothic", sans-serif;
 }
 
 .header {
@@ -244,7 +266,7 @@ body {
 .home .home-card img {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
+  border-radius: 50px;
 }
 .home .card1 {
   bottom: 20px;
@@ -276,6 +298,84 @@ body {
 }
 .home .swiper-slide {
   filter: brightness(30%);
+}
+
+@keyframes animTopBottom {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes animLeftRight {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.about {
+  padding-block: 120px;
+}
+.about .about-wrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+.about .about-item {
+  position: relative;
+}
+.about .content-box * {
+  margin-bottom: 30px;
+}
+.about .about-cont1 {
+  margin-bottom: 20px;
+}
+.about .about-img1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 400px;
+  border-radius: 50px;
+  margin-left: 40px;
+  z-index: 99;
+}
+.about .about-img2 {
+  position: absolute;
+  top: 60px;
+  left: -130px;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  animation: 3s animTopBottom infinite;
+}
+.about .about-img3 {
+  position: absolute;
+  bottom: -50px;
+  left: -15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  z-index: 88;
+  animation: 5s animTopBottom infinite;
+}
+.about .about-img4 {
+  position: absolute;
+  bottom: -110px;
+  right: 130px;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  z-index: 99;
+  animation: 4s animLeftRight infinite;
 }
 
 @keyframes animTopBottom {

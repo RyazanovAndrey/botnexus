@@ -1,0 +1,19 @@
+@use "../base/vars" as *;
+
+.section-desc {
+  padding: 10px 20px;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: $font-title;
+  background-image: $color-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+}
+
+.section-title {
+  font-size: 60px;
+  font-family: $font-title;
+}

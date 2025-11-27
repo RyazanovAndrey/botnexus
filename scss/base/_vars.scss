@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Science+Gothic:wght@100..900&display=swap');
 
+//@font-face {
+//  font-family: 'Science Gothic';
+//  src: url("./fonts/Conthrax-SemiBold.woff2");
+//}
+
 $color-bg: #0b0f2c;
 $color-white: white;
 $color-btn1: #774afc;
 $color-btn2: #c3abfd;
 $color-gradient: linear-gradient(45deg, #774afc, #c3abfd);
+
+$radius: 50px;
+
 
 $font-main: 'Inter';
 $font-title: 'Science Gothic', sans-serif;

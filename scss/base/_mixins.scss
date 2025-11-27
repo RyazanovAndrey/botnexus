@@ -1,0 +1,9 @@
+@mixin flex-line($flex: flex, $jsc, $ai) {
+  display: $flex;
+  justify-content: $jsc;
+  align-items: $ai;
+}
+
+@mixin padding($padding) {
+  padding-block: $padding;
+}
