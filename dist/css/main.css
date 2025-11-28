@@ -615,14 +615,27 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 50px;
 }
 .journey .journey-wrapper-list {
+  position: relative;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 50px;
 }
+.journey .journey-wrapper-list::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #774afc;
+  top: 0;
+  left: 50%;
+  transform: translateX(-1px);
+}
 .journey .journey-content {
+  position: relative;
   border: 1px solid #000;
   padding: 20px;
   border-radius: 20px;
@@ -632,6 +645,28 @@ body {
 }
 .journey .journey-content p {
   font-size: 14px;
+}
+.journey .journey-content::before {
+  position: absolute;
+  content: "";
+  width: 27px;
+  height: 2px;
+  background-color: #774afc;
+  top: calc(50% - 1px);
+  left: 100%;
+}
+.journey .journey-content.line2::before {
+  left: -27px;
+}
+.journey .journey-content::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #774afc;
+  top: calc(50% - 5px);
+  left: 103.4%;
+  border-radius: 50%;
 }
 .journey .journey-card {
   margin-bottom: 20px;
@@ -648,13 +683,13 @@ body {
   -webkit-text-fill-color: transparent;
   color: white;
 }
-.journey .journey-title {
+.journey .journey-list-title {
   position: relative;
   font-size: 20px;
   font-family: "Science Gothic", sans-serif;
   margin-bottom: 20px;
 }
-.journey .journey-title::before {
+.journey .journey-list-title::before {
   position: absolute;
   content: "";
   width: 20%;
