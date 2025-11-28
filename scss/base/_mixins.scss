@@ -10,14 +10,15 @@
   padding-block: $padding;
 }
 
-@mixin circleRaund($top-bottom, $left-right, $value1, $value2) {
+@mixin circleRaund($value1, $value2) {
   position: absolute;
-  $top-bottom: $value1;
-  $left-right: $value2;
+  top: $value1;
+  right: $value2;
   width: 600px;
   height: 600px;
   background-color: $color-btn1;
   filter: blur(100px);
   border-radius: 100%;
   opacity: 0.4;
+  z-index: -1;
 }

@@ -350,12 +350,15 @@ body {
 }
 .home .circle {
   position: absolute;
+  top: 0px;
+  right: 0px;
   width: 600px;
   height: 600px;
   background-color: #774afc;
   filter: blur(100px);
   border-radius: 100%;
   opacity: 0.4;
+  z-index: -1;
 }
 .home .home-wrapper {
   display: flex;
