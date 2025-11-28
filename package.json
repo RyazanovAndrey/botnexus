@@ -1,0 +1,23 @@
+{
+  "name": "botnexus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass scss:dist/css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyazanovAndrey/botnexus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyazanovAndrey/botnexus/issues"
+  },
+  "homepage": "https://github.com/RyazanovAndrey/botnexus#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.94.2"
+  }
+}
