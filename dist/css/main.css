@@ -316,6 +316,79 @@ body {
   scale: 1.1;
 }
 
+.journey-card {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.journey-card:hover .journey-list-title {
+  color: #774afc;
+}
+.journey-card span {
+  position: relative;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  border-radius: 20px;
+  font-family: "Science Gothic", sans-serif;
+  background-image: linear-gradient(45deg, #774afc, #c3abfd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+}
+.journey-card .journey-content {
+  position: relative;
+  border: 1px solid #000;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
+}
+.journey-card .journey-content p {
+  font-size: 14px;
+}
+.journey-card .journey-content::before {
+  position: absolute;
+  content: "";
+  width: 27px;
+  height: 2px;
+  background-color: #774afc;
+  top: calc(50% - 1px);
+  left: 100%;
+}
+.journey-card .journey-content.line2::before {
+  left: -27px;
+}
+.journey-card .journey-content::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #774afc;
+  top: calc(50% - 5px);
+  left: 103.4%;
+  border-radius: 50%;
+}
+.journey-card .journey-content.line2::after {
+  left: -30px;
+}
+.journey-card .journey-list-title {
+  position: relative;
+  font-size: 20px;
+  font-family: "Science Gothic", sans-serif;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.journey-card .journey-list-title::before {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 4px;
+  background: linear-gradient(45deg, #774afc, #c3abfd);
+  top: 100%;
+  left: 0;
+}
+
 .header {
   position: relative;
   padding-block: 15px;
@@ -633,70 +706,6 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-1px);
-}
-.journey .journey-content {
-  position: relative;
-  border: 1px solid #000;
-  padding: 20px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-top: 10px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
-}
-.journey .journey-content p {
-  font-size: 14px;
-}
-.journey .journey-content::before {
-  position: absolute;
-  content: "";
-  width: 27px;
-  height: 2px;
-  background-color: #774afc;
-  top: calc(50% - 1px);
-  left: 100%;
-}
-.journey .journey-content.line2::before {
-  left: -27px;
-}
-.journey .journey-content::after {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #774afc;
-  top: calc(50% - 5px);
-  left: 103.4%;
-  border-radius: 50%;
-}
-.journey .journey-card {
-  margin-bottom: 20px;
-}
-.journey .journey-card span {
-  position: relative;
-  display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 15px;
-  border-radius: 20px;
-  font-family: "Science Gothic", sans-serif;
-  background-image: linear-gradient(45deg, #774afc, #c3abfd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: white;
-}
-.journey .journey-list-title {
-  position: relative;
-  font-size: 20px;
-  font-family: "Science Gothic", sans-serif;
-  margin-bottom: 20px;
-}
-.journey .journey-list-title::before {
-  position: absolute;
-  content: "";
-  width: 20%;
-  height: 4px;
-  background: linear-gradient(45deg, #774afc, #c3abfd);
-  top: 100%;
-  left: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
