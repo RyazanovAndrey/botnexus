@@ -708,4 +708,21 @@ body {
   transform: translateX(-1px);
 }
 
+.team {
+  padding-block: 150px;
+}
+.team .team-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.team .swiper.team {
+  overflow: hidden;
+}
+.team .swiper-wrapper {
+  display: inline-flex;
+}
+
 /*# sourceMappingURL=main.css.map */

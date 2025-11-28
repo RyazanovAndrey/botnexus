@@ -25,6 +25,16 @@ const swiperCollection = new Swiper('.swiper.collection-slider', {
     }
 });
 
+const swiperTeam = new Swiper('.swiper.team', {
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 20,
+    grabCursor: true,
+    autoplay: {
+        delay: 2000
+    }
+});
+
 // Header
 
 const headerLine = document.querySelector('.header')
