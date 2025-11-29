@@ -1,0 +1,31 @@
+@use '../base/vars' as *;
+
+.footer {
+
+    .footer-wrapper {
+        display: flex;
+        column-gap: 50px;
+        justify-content: center;
+        padding-block: 10px;
+    }
+
+    .footer-menu {
+        display: flex;
+        column-gap: 50px;
+        
+        a {
+            color: grey;
+
+            &:hover {
+                color: $color-btn1;
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    padding-block: 10px;
+    display: flex;
+    justify-content: center;
+    color: grey;
+}

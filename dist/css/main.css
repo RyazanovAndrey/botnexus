@@ -905,4 +905,28 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.footer .footer-wrapper {
+  display: flex;
+  column-gap: 50px;
+  justify-content: center;
+  padding-block: 10px;
+}
+.footer .footer-menu {
+  display: flex;
+  column-gap: 50px;
+}
+.footer .footer-menu a {
+  color: grey;
+}
+.footer .footer-menu a:hover {
+  color: #774afc;
+}
+
+.footer-bottom {
+  padding-block: 10px;
+  display: flex;
+  justify-content: center;
+  color: grey;
+}
+
 /*# sourceMappingURL=main.css.map */
