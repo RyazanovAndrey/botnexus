@@ -1,0 +1,55 @@
+@use '../base//vars' as *;
+@use '../base//mixins' as *;
+
+.create {
+
+    @include padding(100px);
+
+    .create-box {
+
+        display: flex;
+        padding-inline: 50px;
+        justify-content: space-between;
+        background: $color-gradient;
+        border-radius: 20px;
+        height: 200px;
+    }
+
+    .create-title {
+        font-size: 30px;
+        font-family: $font-title;
+    }
+
+    .create-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    .create-btn {
+        background: linear-gradient(45deg, #fd8b18, #ffcb68);
+        padding: 15px 40px;
+        border-radius: 5px;
+        display: block;
+        width: 300px;
+        text-align: center;
+    }
+
+    .create-img {
+        margin-top: -100px;
+        animation: 5s animPeople infinite;
+    }
+}
+
+@keyframes animPeople {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

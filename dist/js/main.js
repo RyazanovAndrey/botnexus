@@ -35,6 +35,16 @@ const swiperTeam = new Swiper('.swiper.team', {
     // }
 });
 
+const swiperTesti = new Swiper('.swiper.testi', {
+    loop: true,
+    slidesPerView: 1,
+    grabCursor: true,
+    spaceBetween: 20,
+    // autoplay: {
+    //     delay: 2000
+    // }
+});
+
 // Header
 
 const headerLine = document.querySelector('.header')

@@ -11,5 +11,53 @@
         text-align: center;
         margin-bottom: 50px;
     }
-    
+
+    .swiper.testi {
+        overflow: hidden;
+    }
+
+    .swiper-wrapper {
+        display: inline-flex;
+    }
+
+
+    .testi-slider-box {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+        border-radius: 20px;
+        background: linear-gradient(180deg, #ffffff25, #ffffff00);
+
+         p {
+            max-width: 800px;
+         }
+    }
+
+    .testi-avt-img {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .testi-avt {
+        position: absolute;
+    }
+
+    .testi-avt-name {
+        font-family: $font-title;
+    }
+
+    .testi-avt-job {
+        font-size: 14px;
+    }
+
+    .testi-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
