@@ -30,9 +30,9 @@ const swiperTeam = new Swiper('.swiper.team', {
     slidesPerView: 4,
     spaceBetween: 20,
     grabCursor: true,
-    autoplay: {
-        delay: 2000
-    }
+    // autoplay: {
+    //     delay: 2000
+    // }
 });
 
 // Header

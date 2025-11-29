@@ -1,0 +1,79 @@
+@use '../base/vars' as *;
+
+.team-card {
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover .team-title-name {
+        color: $color-btn1;
+    }
+
+    .team-img-box {
+        height: 300px;
+        width: 300px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 10px;
+
+        .team-img {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+                transition: .5s;
+            }
+
+            img {
+                position: absolute;
+                top: -50px;
+            }
+        }
+    }
+
+    &:hover .team-img::after {
+        width: 100%;
+        left: 100%;
+    }
+
+    .team-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        column-gap: 20px;
+        margin-top: 20px;
+    }
+
+    .team-title-name {
+        font-size: 20px;
+        font-family: $font-title;
+        transition: .3s;
+    }
+
+    .team-job {
+        font-size: 14px;
+    }
+
+    .team-icon-group {
+        display: flex;
+        column-gap: 15px;
+    }
+
+    .team-icon {
+        transition: .3s;
+    }
+
+    .team-icon:hover {
+        color: $color-btn1;
+    }
+}
