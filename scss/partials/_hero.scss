@@ -7,7 +7,7 @@
   padding-block: 70px;
 
   .circle {
-    @include circleRaund(0px, 0px)
+    @include circleRaund(0, 0, 0.2)
   }
 
   .home-wrapper {

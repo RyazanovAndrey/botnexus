@@ -2,7 +2,12 @@
 @use "../base/mixins" as *;
 
 .steps {
+  position: relative;
   @include padding(140px);
+
+  .circle {
+    @include circleRaund(50%, 80%, 0.2);
+  }
 
   .steps-wrapper {
     display: flex;

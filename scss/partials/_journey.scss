@@ -3,7 +3,12 @@
 
 .journey {
 
+  position: relative;
   @include padding(100px);
+
+  .circle {
+    @include circleRaund(20%, -20%, 0.2);
+  }
 
   .journey-wrapper {
     display: flex;

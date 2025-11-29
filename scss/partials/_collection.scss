@@ -3,7 +3,10 @@
 
 .collection {
 
+  position: relative;
   @include padding(140px);
+
+  @include circleRaund(0, 0, 0.2);
 
   .collection-wrapper {
     display: flex;

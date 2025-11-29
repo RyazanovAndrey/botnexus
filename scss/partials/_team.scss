@@ -3,7 +3,12 @@
 
 .team {
 
+    position: relative;
     @include padding(100px);
+
+    .circle {
+        @include circleRaund(20%, 80%, 0.2);
+    }
 
     .team-wrapper {
         display: flex;

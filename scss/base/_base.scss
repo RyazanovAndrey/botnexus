@@ -1,4 +1,5 @@
 @use "vars" as *;
+@use "mixins" as *;
 
 html {
   scroll-behavior: smooth;
@@ -12,6 +13,34 @@ body {
   font-family: $font-main;
   background-color: $color-bg;
   color: white;
+  overflow-x: hidden;
+}
+
+.section-wrapper {
+  background: url('../images/line.png') center no-repeat;
+}
+
+.section-both {
+  position: relative;
+  overflow: hidden;
+
+  .circle {
+    @include circleRaund(100%, 80%, 0.2);
+  }
+}
+
+.btn-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .container {
@@ -22,19 +51,19 @@ body {
     max-width: 90%;
   }
 
-  @media(width >= 768px) {
+  @media(width >=768px) {
     max-width: 720px;
   }
 
-  @media(width >= 992px) {
+  @media(width >=992px) {
     max-width: 960px;
   }
 
-  @media(width >= 1200px) {
+  @media(width >=1200px) {
     max-width: 1140px;
   }
 
-  @media(width >= 1400px) {
+  @media(width >=1400px) {
     max-width: 1320px;
   }
 

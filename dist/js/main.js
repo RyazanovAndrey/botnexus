@@ -30,9 +30,9 @@ const swiperTeam = new Swiper('.swiper.team', {
     slidesPerView: 4,
     spaceBetween: 20,
     grabCursor: true,
-    // autoplay: {
-    //     delay: 2000
-    // }
+    autoplay: {
+        delay: 2000
+    }
 });
 
 const swiperTesti = new Swiper('.swiper.testi', {
@@ -40,20 +40,22 @@ const swiperTesti = new Swiper('.swiper.testi', {
     slidesPerView: 1,
     grabCursor: true,
     spaceBetween: 20,
-    // autoplay: {
-    //     delay: 2000
-    // }
+    autoplay: {
+        delay: 2000
+    }
 });
 
 // Header
 
 const headerLine = document.querySelector('.header')
+const btnUp = document.querySelector('.btn-up')
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY
     console.log(currentScroll)
 
     showHeader(currentScroll)
+    showUpBtn(currentScroll)
 })
 
 function showHeader(currentScroll) {
@@ -61,5 +63,13 @@ function showHeader(currentScroll) {
         headerLine.classList.add('show-header')
     } else {
         headerLine.classList.remove('show-header')
+    }
+}
+
+function showUpBtn(currentScroll) {
+    if(currentScroll >= document.documentElement.scrollHeight / 2) {
+        btnUp.classList.add('show')
+    } else {
+        btnUp.classList.remove('show')
     }
 }

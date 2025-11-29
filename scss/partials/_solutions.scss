@@ -3,8 +3,12 @@
 
 .solutions {
 
+  position: relative;
   @include padding(150px);
-  border: 1px solid red;
+
+  .circle {
+    @include circleRaund(0, -20%, 0.2);
+  }
 
   .solutions-wrapper {
     display: flex;

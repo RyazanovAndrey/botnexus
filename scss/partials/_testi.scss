@@ -2,7 +2,13 @@
 @use '../base/mixins' as *;
 
 .testi {
-    @include padding(100px);
+
+    position: relative;
+    @include padding(50px);
+
+    .circle {
+        @include circleRaund(0, 0, 0.2);
+    }
 
     .testi-wrapper {
         display: flex;
