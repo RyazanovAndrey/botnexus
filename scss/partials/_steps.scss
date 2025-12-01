@@ -5,6 +5,10 @@
   position: relative;
   @include padding(140px);
 
+  .steps-image {
+    animation: toTopBottom 5s infinite;
+  }
+
   .circle {
     @include circleRaund(50%, 80%, 0.2);
   }
@@ -26,5 +30,17 @@
 
   .steps-text {
     max-width: 600px;
+  }
+}
+
+@keyframes toTopBottom {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

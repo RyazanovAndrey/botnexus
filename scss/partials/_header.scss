@@ -6,9 +6,11 @@
   width: 100%;
   z-index: 999;
   transition: .3s;
+  border-bottom: 1px solid transparent;
 
   &.active {
-    background-color: #161d53;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #141a4e;
   }
 
 
