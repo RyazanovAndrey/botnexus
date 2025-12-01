@@ -1,8 +1,16 @@
 @use "../base/vars" as *;
 
 .header {
-  position: relative;
+  position: fixed;
   padding-block: 15px;
+  width: 100%;
+  z-index: 999;
+  transition: .3s;
+
+  &.active {
+    background-color: #161d53;
+  }
+
 
   .logo {
     background-image: $color-gradient; /* Or any other gradient type/colors */

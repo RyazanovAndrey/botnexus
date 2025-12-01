@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "sass scss:dist/css --watch"
+    "dev": "sass scss:css --watch"
   },
   "repository": {
     "type": "git",

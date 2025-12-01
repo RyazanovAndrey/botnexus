@@ -52,17 +52,16 @@ const btnUp = document.querySelector('.btn-up')
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY
-    console.log(currentScroll)
 
     showHeader(currentScroll)
     showUpBtn(currentScroll)
 })
 
 function showHeader(currentScroll) {
-    if(currentScroll >= 400) {
-        headerLine.classList.add('show-header')
+    if(currentScroll >= 50) {
+        headerLine.classList.add('active')
     } else {
-        headerLine.classList.remove('show-header')
+        headerLine.classList.remove('active')
     }
 }
 
