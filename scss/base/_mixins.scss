@@ -16,3 +16,15 @@
   z-index: -1;
   opacity: $opacity;
 }
+
+@mixin adaptive($breakpoint) {
+  @media(width >= $breakpoint) {
+    @content
+  }
+}
+
+@mixin adaptiveMobile($breakpoint) {
+  @media(width < $breakpoint) {
+    @content
+  }
+}

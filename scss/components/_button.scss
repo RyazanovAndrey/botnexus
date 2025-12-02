@@ -1,4 +1,5 @@
 @use "../base/vars" as *;
+@use '../base/mixins' as *;
 
 .btn {
   position: relative;
@@ -8,6 +9,14 @@
   border-radius: 5px;
   font-family: $font-title;
   overflow: hidden;
+
+  @include adaptive(768px) {
+    padding: 15px;
+  }
+
+  @include adaptiveMobile(576px) {
+    padding: 8px;
+  }
 }
 
 .btn:after {

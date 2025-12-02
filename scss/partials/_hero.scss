@@ -12,10 +12,27 @@
   }
 
   .home-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     column-gap: 50px;
     justify-content: space-between;
+    justify-items: end;
+
+    @include adaptiveMobile(992px) {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
+
+    @include adaptiveMobile(768px) {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
+
+    @include adaptiveMobile(576px) {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
   }
 
   .home-content * {
@@ -49,10 +66,14 @@
   }
 
   .home-text {
-    background-image: $color-gradient; /* Or any other gradient type/colors */
-    -webkit-background-clip: text; /* Clip the background to the shape of the text */
-    -webkit-text-fill-color: transparent; /* Make the text transparent to reveal the background */
-    color: white; /* Fallback color for browsers that don't support the above properties */
+    background-image: $color-gradient;
+    /* Or any other gradient type/colors */
+    -webkit-background-clip: text;
+    /* Clip the background to the shape of the text */
+    -webkit-text-fill-color: transparent;
+    /* Make the text transparent to reveal the background */
+    color: white;
+    /* Fallback color for browsers that don't support the above properties */
   }
 
   .home-card {
@@ -116,9 +137,11 @@
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(20px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -128,9 +151,11 @@
   0% {
     transform: translateX(0px);
   }
+
   50% {
     transform: translateX(20px);
   }
+
   100% {
     transform: translateX(0px);
   }
