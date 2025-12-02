@@ -1,3 +1,9 @@
+const headerLine = document.querySelector('.header')
+const btnUp = document.querySelector('.btn-up')
+const mobileIcon = document.querySelector('.mobile-icon')
+const mobileLinks = document.querySelectorAll('.mobile-link')
+const mobileMenu = document.querySelector('.mobile-menu')
+
 var typed = new Typed('#element', {
     strings: ['Music', 'NFTs', 'Arts'],
     typeSpeed: 100,
@@ -10,7 +16,7 @@ const swiperPromo = new Swiper('.swiper.promo', {
     slidesPerView: 4,
     spaceBetween: 20,
     grabCursor: true,
-        autoplay: {
+    autoplay: {
         delay: 2000
     },
 });
@@ -87,9 +93,6 @@ const swiperTesti = new Swiper('.swiper.testi', {
 
 // Header
 
-const headerLine = document.querySelector('.header')
-const btnUp = document.querySelector('.btn-up')
-
 window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY
 
@@ -112,3 +115,22 @@ function showUpBtn(currentScroll) {
         btnUp.classList.remove('show')
     }
 }
+
+// Mobile Menu
+
+mobileIcon.addEventListener('click', () => {
+    mobileIcon.classList.toggle('open')
+
+    if (mobileIcon.classList.contains('open')) {
+        mobileMenu.classList.add('open')
+    } else {
+        mobileMenu.classList.remove('open')
+    }
+})
+
+mobileLinks.forEach(item => {
+    item.addEventListener('click', () => {
+        mobileMenu.classList.remove('open')
+        mobileIcon.classList.remove('open')
+    })
+})

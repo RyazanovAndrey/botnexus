@@ -47,9 +47,18 @@
   }
 }
 
-.mobile-menu {
+.mobile-icon {
   cursor: pointer;
   font-size: 30px;
+
+  &.open .ri-menu-4-line {
+    display: none;
+  }
+
+  &.open .ri-close-large-line {
+    display: block;
+  }
+
 
   & .ri-close-large-line {
     display: none;
@@ -57,6 +66,24 @@
 
   @include adaptive(992px) {
     display: none;
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: $color-btn1;
+  width: 100%;
+  display: none;
+
+  &.open {
+    display: block;
+  }
+
+  & .mobile-link {
+    display: block;
+    padding: 20px;
   }
 }
 

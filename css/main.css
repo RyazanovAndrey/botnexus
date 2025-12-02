@@ -541,17 +541,39 @@ body {
   }
 }
 
-.mobile-menu {
+.mobile-icon {
   cursor: pointer;
   font-size: 30px;
 }
-.mobile-menu .ri-close-large-line {
+.mobile-icon.open .ri-menu-4-line {
+  display: none;
+}
+.mobile-icon.open .ri-close-large-line {
+  display: block;
+}
+.mobile-icon .ri-close-large-line {
   display: none;
 }
 @media (width >= 992px) {
-  .mobile-menu {
+  .mobile-icon {
     display: none;
   }
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #774afc;
+  width: 100%;
+  display: none;
+}
+.mobile-menu.open {
+  display: block;
+}
+.mobile-menu .mobile-link {
+  display: block;
+  padding: 20px;
 }
 
 .link:hover {
