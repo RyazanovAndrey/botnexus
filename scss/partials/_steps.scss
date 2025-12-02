@@ -22,10 +22,14 @@
 
   .steps-content-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
     column-gap: 20px;
     margin-top: 80px;
+
+    @include adaptive(992px) {
+       grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .steps-text {

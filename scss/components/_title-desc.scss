@@ -17,6 +17,8 @@
 .section-title {
   font-size: 30px;
   font-family: $font-title;
+  text-align: center;
+  margin-block: 15px;
 
   @include adaptive(576px) {
     font-size: 30px;

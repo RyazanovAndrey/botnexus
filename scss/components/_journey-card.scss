@@ -1,4 +1,5 @@
 @use '../base/vars' as *;
+@use '../base/mixins' as *;
 
 .journey-card {
 
@@ -43,6 +44,11 @@
             background-color: $color-btn1;
             top: calc(50% - 1px);
             left: 100%;
+            display: none;
+
+            @include adaptive(768px) {
+                display: block;
+            }
         }
 
         &.line2::before {
@@ -58,6 +64,11 @@
             top: calc(50% - 5px);
             left: 103.4%;
             border-radius: 50%;
+            display: none;
+
+            @include adaptive(768px) {
+                display: block;
+            }
         }
 
         &.line2::after {

@@ -15,13 +15,31 @@ const swiperPromo = new Swiper('.swiper.promo', {
     }
 });
 
-const swiperCollection = new Swiper('.swiper.collection-slider', {
+const swiperCollection = new Swiper('.swiper.gallery-slider', {
     loop: true,
     slidesPerView: 4,
     spaceBetween: 20,
     grabCursor: true,
     autoplay: {
         delay: 2000
+    },
+    breakpoints: {
+        375: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
     }
 });
 
@@ -32,6 +50,28 @@ const swiperTeam = new Swiper('.swiper.team', {
     grabCursor: true,
     autoplay: {
         delay: 2000
+    },
+        breakpoints: {
+        375: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
     }
 });
 
@@ -58,7 +98,7 @@ window.addEventListener('scroll', () => {
 })
 
 function showHeader(currentScroll) {
-    if(currentScroll >= 50) {
+    if (currentScroll >= 50) {
         headerLine.classList.add('active')
     } else {
         headerLine.classList.remove('active')
@@ -66,7 +106,7 @@ function showHeader(currentScroll) {
 }
 
 function showUpBtn(currentScroll) {
-    if(currentScroll >= document.documentElement.scrollHeight / 2) {
+    if (currentScroll >= document.documentElement.scrollHeight / 2) {
         btnUp.classList.add('show')
     } else {
         btnUp.classList.remove('show')

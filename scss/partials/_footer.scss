@@ -1,24 +1,41 @@
 @use '../base/vars' as *;
+@use '../base/mixins' as *;
 
 .footer {
 
     .footer-wrapper {
         display: flex;
+        padding-block: 10px;
         column-gap: 50px;
         justify-content: center;
-        padding-block: 10px;
     }
+
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include adaptive(1024px) {
+            flex-direction: row;
+        }
+    }
+
 
     .footer-menu {
         display: flex;
-        column-gap: 50px;
-        
+        flex-direction: column;
+        gap: 20px;
+
         a {
             color: grey;
 
             &:hover {
                 color: $color-btn1;
             }
+        }
+
+        @include adaptive(1024px) {
+            flex-direction: row;
         }
     }
 }
