@@ -10,9 +10,9 @@ const swiperPromo = new Swiper('.swiper.promo', {
     slidesPerView: 4,
     spaceBetween: 20,
     grabCursor: true,
-    autoplay: {
+        autoplay: {
         delay: 2000
-    }
+    },
 });
 
 const swiperCollection = new Swiper('.swiper.gallery-slider', {
@@ -51,7 +51,7 @@ const swiperTeam = new Swiper('.swiper.team', {
     autoplay: {
         delay: 2000
     },
-        breakpoints: {
+    breakpoints: {
         375: {
             slidesPerView: 1,
             spaceBetween: 20,

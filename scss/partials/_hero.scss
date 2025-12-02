@@ -12,12 +12,16 @@
   }
 
   .home-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     align-items: center;
     column-gap: 50px;
     justify-content: center;
-    justify-items: end;
+
+    @include adaptive(1024px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   .home-content * {
@@ -100,21 +104,34 @@
   }
 
   .home-title {
-    font-size: 50px;
+    font-size: 30px;
     font-family: $font-title;
+
+    @include adaptive(768px) {
+      font-size: 50px;
+    }
+  }
+
+  .slider {
+    max-width: 600px;
+    display: none;
+
+    @include adaptive(768px) {
+      display: block;
+    }
   }
 
   .swiper.promo {
     overflow: hidden;
-    width: 600px;
-
-    .swiper-wrapper {
-      display: inline-flex;
-    }
+    margin-bottom: 80px;
   }
 
-  .swiper-slide {
-    filter: brightness(30%);
+  .swiper-wrapper {
+    display: inline-flex;
+  }
+
+  .promo-img {
+    filter: brightness(50%);
   }
 }
 

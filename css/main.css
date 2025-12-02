@@ -585,12 +585,17 @@ body {
   opacity: 0.2;
 }
 .home .home-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   align-items: center;
   column-gap: 50px;
   justify-content: center;
-  justify-items: end;
+}
+@media (width >= 1024px) {
+  .home .home-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .home .home-content * {
   margin-bottom: 50px;
@@ -661,18 +666,32 @@ body {
   border-radius: 50px;
 }
 .home .home-title {
-  font-size: 50px;
+  font-size: 30px;
   font-family: "Science Gothic", sans-serif;
+}
+@media (width >= 768px) {
+  .home .home-title {
+    font-size: 50px;
+  }
+}
+.home .slider {
+  max-width: 600px;
+  display: none;
+}
+@media (width >= 768px) {
+  .home .slider {
+    display: block;
+  }
 }
 .home .swiper.promo {
   overflow: hidden;
-  width: 600px;
+  margin-bottom: 80px;
 }
-.home .swiper.promo .swiper-wrapper {
+.home .swiper-wrapper {
   display: inline-flex;
 }
-.home .swiper-slide {
-  filter: brightness(30%);
+.home .promo-img {
+  filter: brightness(50%);
 }
 
 @keyframes animTopBottom {
