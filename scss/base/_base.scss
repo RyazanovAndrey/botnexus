@@ -49,7 +49,11 @@ body {
   padding-inline: 15px;
 
   @media(width < 576px) {
-    max-width: 90%;
+    width: 90%;
+  }
+
+  @media(width >=576px) {
+    max-width: 540px;
   }
 
   @media(width >=768px) {

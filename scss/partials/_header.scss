@@ -37,44 +37,27 @@
 
   .menu {
 
-    display: flex;
+    display: none;
     column-gap: 80px;
 
-    @include adaptiveMobile(992px) {
-      display: none;
-    }
-
-    @include adaptiveMobile(768px) {
-      display: none;
-    }
-
-    @include adaptiveMobile(576px) {
-      display: none;
+    @include adaptive(992px) {
+      display: flex;
     }
 
   }
 }
 
 .mobile-menu {
-
-  display: none;
-
-  @include adaptiveMobile(992px) {
-    display: block;
-  }
-
-
-  @include adaptiveMobile(768px) {
-    display: block;
-  }
-
-  @include adaptiveMobile(576px) {
-    display: block;
-  }
-}
-
-.ri-menu-4-line {
+  cursor: pointer;
   font-size: 30px;
+
+  & .ri-close-large-line {
+    display: none;
+  }
+
+  @include adaptive(992px) {
+    display: none;
+  }
 }
 
 .link:hover {
